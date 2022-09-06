@@ -7,7 +7,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: sans-serif;
+  font-family: sans-serif;
   margin: 0;
 }
 
@@ -40,29 +40,75 @@ section.box-model-section {
 }
 
 .interior h1 {
-    color: #000;
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 1.5;
-    margin-bottom: 45px;
+  color: #000;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 45px;
 }
 
 .interior h2 {
-    color: black;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 1;
+  color: black;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
 }
 
 .interior p {
-    color: black;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 1;
+  color: black;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .box-model-interior {
   background-color: #9ef490;
   border: 10px solid #187908;
   min-height: 600px;
+}
+
+section.heading-section {
+  background-color: #f1caf0;
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: 700;
+}
+
+section.heading-section .heading-section-interior {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+section.heading-section h1,
+section.heading-section h2,
+section.heading-section h3,
+section.heading-section h4 {
+  color: #6c0468;
+}
+
+section.heading-section h1 {
+  font-size: 64px;
+  line-height: 74px;
+}
+
+section.heading-section h2 {
+  font-size: 40px;
+  line-height: 46px;
+}
+
+section.heading-section h3 {
+  font-size: 64px;
+  line-height: 74px;
+}
+
+section.heading-section h4 {
+  font-size: 36px;
+  line-height: 41px;
+}
+
+section.heading-section p {
+  color: #3a0f39;
+  font-size: 20px;
+  line-height: 23px;
 }

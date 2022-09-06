@@ -10,29 +10,44 @@
   <body>
     <header>
       <nav>
-        <a href="">Box Model</a>
-        <a href="">Flexbox</a>
-        <a href="">Positioning Elements</a>
-        <a href="">Heading Usage</a>
-        <a href="">Simple JavaScript</a>
+        <a>Box Model</a>
+        <a>Flexbox</a>
+        <a>Positioning Elements</a>
+        <a>Heading Usage</a>
+        <a>Simple JavaSript</a>
       </nav>
     </header>
 
     <main>
-      <section id="box-model" class="box-model-section section"></section>
-      <section id="flex-box" class="flex-box-section section"></section>
+      <section id="box-model" class="box-model-section section-element">
+        <div class="box-model-interior interior">
+          <h1>CSS Box Model</h1>
+          <h2>/* Padding is inside of the element in CSS */</h2>
+          <p>padding: 40px;</p>
+          <h2>/* Margin is outside of the element in CSS */</h2>
+          <p>margin: 40px; (outside)</p>
+          <h2>/* Border is added to width and height of element in CSS */</h2>
+          <p>border: 10px solid green;</p>
+        </div>
+      </section>
+      <section id="flex-box" class="flex-box-section section-element">
+        <div class="interior"></div>
+      </section>
       <section
         id="positioning-section"
-        class="positioning-section section"
-      ></section>
-      <section
-        id="heading-section"
-        class="heading-section section"
-      ></section>
+        class="positioning-section section-element"
+      >
+        <div class="interior"></div>
+      </section>
+      <section id="heading-section" class="heading-section section-element">
+        <div class="interior"></div>
+      </section>
       <section
         id="simple-javascript"
-        class="simple-javascript-section section"
-      ></section>
+        class="simple-javascript-section section-element"
+      >
+        <div class="interior"></div>
+      </section>
     </main>
 
     <footer></footer>

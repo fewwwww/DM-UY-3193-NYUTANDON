@@ -67,6 +67,130 @@ section.box-model-section {
   min-height: 600px;
 }
 
+section.flex-box-section {
+  background-color: #f1d3ca;
+}
+
+section.flex-box-section .interior-flex {
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.interior-flex > div {
+  background-color: #ff9376;
+  border: 10px solid #7d260b;
+}
+
+.interior-flex--top {
+  flex-basis: 100%;
+  margin: 0 auto 40px auto;
+  padding: 32px;
+}
+
+.interior-flex--top > div {
+  align-items: center;
+  background-color: #ffece5;
+  border: 5px solid #dd4414;
+  display: flex;
+  height: 170px;
+  justify-content: center;
+  max-width: 825px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.interior-flex--top > div > h1 {
+  margin: 0;
+}
+
+.interior-flex--horizontal,
+.interior-flex--vertical {
+  display: flex;
+  flex-basis: 48%;
+  height: 325px;
+  padding: 20px;
+}
+
+.interior-flex--horizontal > div,
+.interior-flex--vertical > div {
+  background-color: #ffece5;
+  border: 5px solid #dd4414;
+  flex-basis: 33%;
+}
+
+.interior-flex--horizontal > div {
+  margin-right: 10px;
+}
+
+.interior-flex--vertical > div {
+  margin-bottom: 20px;
+}
+
+.interior-flex--horizontal > div:last-child,
+.interior-flex--vertical > div:last-child {
+  margin: 0;
+}
+
+.interior-flex--vertical {
+  flex-direction: column;
+}
+
+.positioning-section {
+  background-color: #cad7f1;
+}
+
+.positioning-section h1 {
+  z-index: 1;
+}
+
+.positioning-section .interior {
+  background-color: #85c4ff;
+  border-color: #0e3f9e;
+  height: 600px;
+  position: relative;
+}
+
+.circle,
+.square {
+  background-color: #4480f4;
+  border: 10px solid #0e3f9e;
+  height: 200px;
+  position: absolute;
+  width: 200px;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.circle-one {
+  bottom: 48px;
+  left: 48px;
+}
+
+.circle-two {
+  right: 48px;
+  top: 34px;
+}
+
+.circle-three {
+  right: 186px;
+  bottom: 143px;
+}
+
+.square-one {
+  right: 56px;
+  bottom: 48px;
+}
+
+.square-two {
+  right: 510px;
+  bottom: 204px;
+}
+
 section.heading-section {
   background-color: #f1caf0;
   font-family: 'Arimo';
@@ -111,4 +235,73 @@ section.heading-section p {
   color: #3a0f39;
   font-size: 20px;
   line-height: 23px;
+}
+
+section.simple-javascript-section {
+  background-color: #faefd3;
+  min-height: 400px;
+}
+
+section.simple-javascript-section .interior {
+  padding: 0;
+  border: 0px;
+}
+
+section.simple-javascript-section .interior h1 {
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 74px;
+  color: #644904;
+}
+
+.simple-javascript-interaction {
+  display: flex;
+}
+
+.interior .simple-javascript-interaction .simple-javascript-counter {
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 74px;
+  color: #504d46;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.simple-javascript-button {
+  width: 276px;
+  height: 80px;
+  background: #cdc5b1;
+  border: 3px solid #79756c;
+  margin-left: 50px;
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 80px;
+  text-align: center;
+}
+
+.simple-javascript-button:hover {
+  cursor: pointer;
+}
+
+footer {
+  background-color: #ffc4c4;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+footer .interior-footer {
+  padding: 0;
+  border: 0px;
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
 }

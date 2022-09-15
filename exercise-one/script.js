@@ -5,4 +5,3 @@ buttonDom.addEventListener('click', () => {
   let counterNum = Number(counterDom.innerText);
   counterDom.innerText = counterNum + 1;
 });
-

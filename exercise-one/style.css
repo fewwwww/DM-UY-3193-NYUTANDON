@@ -17,9 +17,28 @@ header {
 }
 
 header nav {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
 }
 
 header nav a {
+  color: black;
+  font-weight: bold;
+  margin: 0 15px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+header nav a:last-of-type {
+  margin-right: 0;
+}
+
+header nav a:first-of-type {
+  margin-right: 0;
 }
 
 section.section-element {

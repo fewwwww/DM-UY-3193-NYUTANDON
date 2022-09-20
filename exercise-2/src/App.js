@@ -1,16 +1,25 @@
-import logo from './logo.svg';
+import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
+import React from 'react';
+
 import './App.css';
+import Article from './pages/article';
+import List from './pages/list';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <List />,
+  },
+  {
+    path: '/article',
+    element: <Article />,
+  },
+]);
 
 function App() {
-  const v = "cool"
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          {v}
-        </p>
-      </header>
+    <div className='App'>
+      <RouterProvider router={router} />
     </div>
   );
 }

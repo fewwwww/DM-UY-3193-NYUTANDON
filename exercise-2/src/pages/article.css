@@ -1,0 +1,23 @@
+header, section {
+  max-width: 1200px;
+  padding: 0 350px;
+  margin: 0 auto;
+}
+
+header {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+header h1 {
+  margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 26px;
+}

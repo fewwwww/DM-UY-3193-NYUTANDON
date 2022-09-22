@@ -1,0 +1,42 @@
+.listWrapper {
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 25px;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+.articleCard {
+  border: 1px solid black;
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.articleCard--image {
+  background-color: grey;
+  flex-basis: 30%
+}
+
+.articleCard--image img {
+  height: auto;
+  width: 100%;
+}
+
+.articleCard--text {
+  display: flex;
+  flex-basis: 70%;
+  flex-direction: column;
+}
+
+.articleCard--text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.articleCard .link {
+  justify-self: flex-end;
+}

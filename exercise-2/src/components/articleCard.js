@@ -1,6 +1,6 @@
 import React from "react";
 
-const ArticleCard = ({imageSrc, imageAlt, blurb, date, title}) => {
+const ArticleCard = ({imageSrc, imageAlt, blurb, date, title, id}) => {
   return (
     <div className="articleCard">
       <div className="articleCard--image">
@@ -11,7 +11,7 @@ const ArticleCard = ({imageSrc, imageAlt, blurb, date, title}) => {
         <p className="date">{date}</p>
         <p className="blurb">{blurb}</p>
         <p className="link">
-          <a href="link">Link</a>
+          <a href={`/article/${id}`}>Read More</a>
         </p>
       </div>
     </div>

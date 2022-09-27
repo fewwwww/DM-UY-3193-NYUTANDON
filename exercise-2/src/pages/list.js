@@ -1,26 +1,23 @@
 import React from 'react';
 import './list.css';
 import ArticleCard from '../components/articleCard';
+import Data from '../components/data';
 
 const List = () => {
-  let articles = [];
-  for (let i = 0; i < 10; i++) {
-    articles.push(
-      <ArticleCard
-        imageAlt='a'
-        imageSrc='a'
-        date='aa'
-        blurb='adb'
-        title='da'
-        key={i}
-      />,
-    );
-  }
-
   return (
     <main className='listWrapper'>
       <h1>Articles</h1>
-      {articles}
+      {Data.map((article, index) => (
+        <ArticleCard
+          key={index}
+          blurb={article.blurb}
+          date={article.publishedDate}
+          imageAlt={article.image.alt}
+          imageSrc={article.image.url}
+          title={article.title}
+          id={article.id}
+        />
+      ))}
     </main>
   );
 };

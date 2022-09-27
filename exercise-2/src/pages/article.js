@@ -1,28 +1,21 @@
 import React from 'react';
+import { useParams } from 'react-router';
 import "./article.css";
+import Data from '../components/data';
 
 const Article = ({ imageSrc, imageAlt, title, date, blurb, content }) => {
-  const backgroundImage = "https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000"
+  const { id } = useParams();
+
+  const article = Data.find((article) => article.id === id);
 
   return (
-    // <main>
-    //   <header>
-    //     <img src={imageSrc} alt={imageAlt} />
-    //     <h1>{title}</h1>
-    //     <p>{date}</p>
-    //     <p>{blurb}</p>
-    //   </header>
-    //   <section>
-    //     {content}
-    //   </section>
-    // </main>
     <main>
-      <header style={{ backgroundImage: `url(${backgroundImage})` }}>
-        <h1>title</h1>
-        <p>date</p>
-        <h2>blurb</h2>
+      <header style={{ backgroundImage: `url(${article.image.url})` }}>
+        <h1>{article.title}</h1>
+        <p>{article.publishedDate}</p>
+        <h2>{article.blurb}</h2>
       </header>
-      <section>content</section>
+      <section>{article.articleText[0].data}</section>
     </main>
   );
 };

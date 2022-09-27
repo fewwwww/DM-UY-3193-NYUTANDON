@@ -9,6 +9,10 @@ header {
   padding-top: 20px;
 }
 
+section {
+  margin-top: 20px;
+}
+
 header h1 {
   margin-block-start: 0;
     margin-block-end: 0;

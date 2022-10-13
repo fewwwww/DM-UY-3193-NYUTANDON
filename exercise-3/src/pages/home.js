@@ -25,7 +25,7 @@ const Home = () => {
         console.warn(err);
         setWeatherData({});
       });
-  }, []);
+  }, [city, searchParams]);
 
   const {
     humidity,
@@ -49,10 +49,9 @@ const Home = () => {
     };
   }, [weatherData, city]);
 
-  console.log(weatherData);
-
   return (
-    <main>
+    <main style={{backgroundColor: `rgba(0,0,0,${cloudiness/100})`}}>
+      <div className='wrapper'>
       <Header />
       <WeatherCard
         city={city}
@@ -64,6 +63,7 @@ const Home = () => {
         weatherType={weatherType}
         windSpeed={windSpeed}
       />
+      </div>
     </main>
   );
 };

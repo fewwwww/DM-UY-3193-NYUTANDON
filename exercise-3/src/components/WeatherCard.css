@@ -9,11 +9,14 @@ p {
   padding: 50px;
   border: 1px solid black;
   width: 100%;
+  background-color: white;
 }
 
 .weather-main .city {
   font-size: 60px;
   font-weight: 100;
+  display: inline-block;
+  margin-right: 20px;
 }
 
 .weather-main .type {

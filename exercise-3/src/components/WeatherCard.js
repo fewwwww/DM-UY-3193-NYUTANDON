@@ -1,5 +1,6 @@
 import React from 'react';
 import './WeatherCard.css';
+import WeatherIcon from './WeatherIcon';
 
 const WeatherCard = ({
   city,
@@ -15,6 +16,7 @@ const WeatherCard = ({
     <div className='weather-card'>
       <div className='weather-main'>
         <p className='city'>{city}</p>
+        <WeatherIcon weatherType={weatherType}/>
         <p className='type'>{weatherType}</p>
         <p className='temp'>{currentTemp}</p>
       </div>

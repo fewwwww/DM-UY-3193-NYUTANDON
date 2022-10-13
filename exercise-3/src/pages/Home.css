@@ -1,8 +1,8 @@
-main {
+.wrapper {
   max-width: 600px;
   margin: 0 auto;
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-height: 100vh;
 }

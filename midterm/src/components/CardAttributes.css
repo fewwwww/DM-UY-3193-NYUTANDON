@@ -1,0 +1,20 @@
+.attributes {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #F0FFFF;
+}
+
+.attribute {
+  box-sizing: border-box;
+  border: 2px solid black;
+  flex-basis: 50%;
+}
+
+.attributes .attribute:nth-child(odd) {
+  border-right: none;
+}
+
+.attributes .attribute:nth-child(n+3) {
+  border-top: none;
+}

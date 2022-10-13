@@ -1,0 +1,44 @@
+.search {
+  width: 500px;
+  margin: 0 auto;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search input,
+.search button {
+  border-radius: 10px;
+  border-color: black;
+}
+
+.search input {
+  flex-basis: 60%;
+  height: 40px;
+  font-size: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.search button {
+  flex-basis: 15%;
+  font-size: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.search button:hover {
+  transform: scale(1.05);
+}
+
+.search button:active {
+  transform: scale(0.95);
+}
+
+.search-button {
+  background-color: #f0fff0;
+}
+
+.random-button {
+  background-color: #fff0ff;
+}

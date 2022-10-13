@@ -1,0 +1,67 @@
+img {
+  height: 200px;
+  width: 200px;
+}
+
+.card {
+  border: 3px solid black;
+  width: 500px;
+  min-height: 400px;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 5px;
+  background-color: #FFFFF0;
+}
+
+.card-profile {
+  display: flex;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.card-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-name h1 {
+  font-size: 2rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-weight: normal;
+}
+
+.card-name h2 {
+  font-size: 3rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.card-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-links a img {
+  height: 35px;
+  width: 35px;
+}
+
+.card-rarity {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+
+.card-rarity p{
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-right: 5px;
+}

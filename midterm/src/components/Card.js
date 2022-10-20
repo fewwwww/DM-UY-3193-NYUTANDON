@@ -19,6 +19,10 @@ const Card = ({ nft, address, id }) => {
     );
   }
 
+  if (nft.collectionName === 'BoredApeYachtClub') {
+    nft.collectionName = 'BAYC';
+  }
+
   const attributesCount = nft.attributes.length;
 
   return (

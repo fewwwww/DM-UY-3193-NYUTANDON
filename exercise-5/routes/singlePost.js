@@ -8,15 +8,16 @@ router.use((req, res, next) => {
   next();
 });
 
-router.get('/', (req, res) => {
-  const postsQuery = firestore.getDocs(firestore.collection(db, 'posts'));
-  const postsArray = [];
-  postsQuery
+router.get('/:id', (req, res) => {
+  const postId = req.params.id;
+  const postQuery = firestore.getDoc(firestore.doc(db, 'posts', postId));
+  postQuery
     .then((response) => {
-      response.forEach((post) => {
-        postsArray.push({ id: post.id, ...post.data() });
-      });
-      return res.send(postsArray);
+      const post = response.data();
+      if (!post) {
+        return res.send('Post not found');
+      }
+      return res.send(response.data());
     })
     .catch((error) => {
       console.log(error);

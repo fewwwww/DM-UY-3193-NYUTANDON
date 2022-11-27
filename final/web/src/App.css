@@ -36,3 +36,55 @@
     transform: rotate(360deg);
   }
 }
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-block-start: 0;
+  margin-inline-start: 0;
+  padding-top: 0.67em;
+}
+
+.content {
+  min-height: 100vh;
+  margin-left: 300px;
+  border-left: 1px solid black;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 80px;
+}
+
+.profile-posts {
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+.UserForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.UserForm button,
+.UserForm input {
+  padding: 10px 0;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.UserForm input {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.UserForm label {
+  padding: 5px 0;
+}

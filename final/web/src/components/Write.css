@@ -1,0 +1,64 @@
+.write-view {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.write-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 500px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.WriteForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.WriteForm label {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.WriteForm textarea {
+  width: 400px;
+  height: 200px;
+  max-width: 500px;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.button-group button {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button-group .button-group-submit {
+  background-color: black;
+  color: white;
+}

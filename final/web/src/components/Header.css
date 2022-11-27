@@ -1,0 +1,30 @@
+header {
+  position: fixed;
+  width: 300px;
+  padding: 0 0 30px 0;
+}
+
+.write {
+  border: 1px solid black;
+  border-right: none;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+  font-size: 30px;
+  font-weight:bold;
+  color: black;
+}
+
+.nav-item:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.nav-name {
+  display: inline-block;
+  position: absolute;
+  left: 90px;
+}

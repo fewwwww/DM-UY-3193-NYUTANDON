@@ -4,6 +4,10 @@
   width: 100%;
 }
 
+.post:first-child {
+  border-top: none;
+}
+
 .post-title,
 .post-content {
   padding-bottom: 20px;

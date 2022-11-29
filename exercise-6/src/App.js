@@ -42,6 +42,7 @@ function App() {
           isLoggingIn={isLoggingIn}
           setIsLoggingIn={setIsLoggingIn}
           userInformation={userInformation}
+          setUserInformation={setUserInformation}
         />
       ),
     },

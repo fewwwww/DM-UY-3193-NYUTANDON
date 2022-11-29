@@ -18,6 +18,7 @@ const UserProfilePage = ({
   return (
     <>
       <Header
+        isLoggingIn={isLoggingIn}
         setIsLoggingIn={setIsLoggingIn}
         userInformation={userInformation}
       />

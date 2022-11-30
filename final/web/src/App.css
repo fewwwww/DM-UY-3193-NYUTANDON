@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  box-sizing: border-box;
 }
 
 .App-logo {
@@ -52,6 +53,7 @@ h1 {
   min-height: 100vh;
   margin-left: 300px;
   border-left: 1px solid black;
+  max-width: 800px;
 }
 
 .profile-content {

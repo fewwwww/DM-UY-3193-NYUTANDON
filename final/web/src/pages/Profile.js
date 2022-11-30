@@ -3,14 +3,35 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Post from '../components/Post';
 
-const ProfilePage = () => {
+const ProfilePage = ({
+  isLoggingIn,
+  setIsLoggingIn,
+  userInformation,
+  setUserInformation,
+}) => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!isLoggingIn) {
+      navigate('/login');
+    }
+  }, [isLoggingIn, navigate]);
+
+  if (!userInformation) {
+    return;
+  }
+
   return (
     <div className='page'>
-      <Header />
+      <Header
+        isLoggingIn={isLoggingIn}
+        setIsLoggingIn={setIsLoggingIn}
+        userInformation={userInformation}
+        setUserInformation={setUserInformation}
+      />
       <div className='content profile-content'>
-        <h1>Name</h1>
-        <div>Email: sy2940@nyu.edu</div>
-        <div>uid: abcde</div>
+        <h1>{userInformation.email.split('@')[0]}</h1>
+        <div>Email: {userInformation.email}</div>
+        <div>uid: {userInformation.uid}</div>
         <div className='profile-posts'>posted:</div>
         <Post />
         <Post />

@@ -13,7 +13,10 @@
   padding-bottom: 20px;
 }
 
-.post-title, .post-action, .post-action-upvote, .post-action-own {
+.post-title,
+.post-action,
+.post-action-upvote,
+.post-action-own {
   display: flex;
 }
 
@@ -21,7 +24,8 @@
   margin-right: 20px;
 }
 
-.post-action-upvote, .post-action-own {
+.post-action-upvote,
+.post-action-own {
   align-items: center;
 }
 
@@ -37,7 +41,7 @@
 }
 
 .post-title-date {
-  color: grey
+  color: grey;
 }
 
 .post-content {

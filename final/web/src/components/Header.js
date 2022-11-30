@@ -12,9 +12,22 @@ import {
   faPenToSquare,
 } from '@fortawesome/free-solid-svg-icons';
 import Write from './Write';
+import { getAuth, signOut } from 'firebase/auth';
 
-const Header = () => {
+const Header = ({ isLoggingIn, setIsLoggingIn, setUserInformation }) => {
   const [showWrite, setShowWrite] = useState(false);
+
+  const logOut = () => {
+    const auth = getAuth();
+    signOut(auth)
+      .then(() => {
+        setIsLoggingIn(false);
+        setUserInformation();
+      })
+      .catch((error) => {
+        console.warn(error);
+      });
+  };
 
   return (
     <header>
@@ -32,36 +45,50 @@ const Header = () => {
             <div className='nav-name'>Home</div>
           </div>
         </Link>
-        <Link to='/login'>
-          <div className='nav-item'>
-            <FontAwesomeIcon icon={faRightToBracket} />
-            <div className='nav-name'>Login</div>
+        {!isLoggingIn && (
+          <Link to='/login'>
+            <div className='nav-item'>
+              <FontAwesomeIcon icon={faRightToBracket} />
+              <div className='nav-name'>Login</div>
+            </div>
+          </Link>
+        )}
+        {!isLoggingIn && (
+          <Link to='/signup'>
+            <div className='nav-item'>
+              <FontAwesomeIcon icon={faUserPlus} />
+              <div className='nav-name'>Signup</div>
+            </div>
+          </Link>
+        )}
+        {isLoggingIn && (
+          <Link to='/profile'>
+            <div className='nav-item'>
+              <FontAwesomeIcon icon={faUser} />
+              <div className='nav-name'>Profile</div>
+            </div>
+          </Link>
+        )}
+        {isLoggingIn && (
+          <div
+            onClick={() => {
+              logOut();
+            }}
+          >
+            <div className='nav-item'>
+              <FontAwesomeIcon icon={faRightFromBracket} />
+              <div className='nav-name'>Logout</div>
+            </div>
           </div>
-        </Link>
-        <Link to='/signup'>
-          <div className='nav-item'>
-            <FontAwesomeIcon icon={faUserPlus} />
-            <div className='nav-name'>Signup</div>
+        )}
+        {isLoggingIn && (
+          <div className='write' onClick={() => setShowWrite(true)}>
+            <div className='nav-item'>
+              <FontAwesomeIcon icon={faPenToSquare} />
+              <div className='nav-name'>Write</div>
+            </div>
           </div>
-        </Link>
-        <Link to='/profile'>
-          <div className='nav-item'>
-            <FontAwesomeIcon icon={faUser} />
-            <div className='nav-name'>Profile</div>
-          </div>
-        </Link>
-        <div>
-          <div className='nav-item'>
-            <FontAwesomeIcon icon={faRightFromBracket} />
-            <div className='nav-name'>Logout</div>
-          </div>
-        </div>
-        <div className='write' onClick={() => setShowWrite(true)}>
-          <div className='nav-item'>
-            <FontAwesomeIcon icon={faPenToSquare} />
-            <div className='nav-name'>Write</div>
-          </div>
-        </div>
+        )}
       </nav>
     </header>
   );

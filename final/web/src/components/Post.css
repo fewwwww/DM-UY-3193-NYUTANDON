@@ -1,7 +1,7 @@
 .post {
   padding: 20px 50px;
   border-top: 1px solid black;
-  width: 100%;
+  flex: 100%;
 }
 
 .post:first-child {

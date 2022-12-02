@@ -30,13 +30,13 @@ const ProfilePage = ({
       />
       <div className='content profile-content'>
         <h1>{userInformation.email.split('@')[0]}</h1>
-        <div>Email: {userInformation.email}</div>
-        <div>uid: {userInformation.uid}</div>
-        <div className='profile-posts'>posted:</div>
+        <p>Email: {userInformation.email}</p>
+        <p>uid: {userInformation.uid}</p>
+        <p className='profile-posts'>posted:</p>
         <Post />
         <Post />
         <Post />
-        <div className='profile-posts'>owned:</div>
+        <p className='profile-posts'>owned:</p>
         <Post />
         <Post />
         <Post />

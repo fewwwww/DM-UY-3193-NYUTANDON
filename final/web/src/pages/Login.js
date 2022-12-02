@@ -19,7 +19,6 @@ const LoginPage = ({
   const loginUser = useCallback(
     (e) => {
       e.preventDefault();
-      console.log(e);
       const email = e.currentTarget.email.value;
       const password = e.currentTarget.password.value;
 

@@ -8,21 +8,21 @@ router.use((req, res, next) => {
   next();
 });
 
-router.get('/:id', (req, res) => {
+router.get('/', (req, res) => {
   const queryParams = req.query;
   const owner = queryParams.owner;
+  const id = queryParams.id;
+
   const updateOwner = firestore.updateDoc(
-    firestore.doc(db, 'posts', idFromTitle),
+    firestore.doc(db, 'posts', id),
     {
-      owner: owner,
+      "owner": owner,
     },
   );
 
   updateOwner
     .then((response) => {
-      return res.send(`
-    <h1>Submission Successful!</h1>
-  `);
+      return res.redirect('http://localhost:3000');
     })
     .catch((error) => {
       console.log(error);

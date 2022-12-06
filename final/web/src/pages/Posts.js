@@ -44,9 +44,11 @@ const PostsPage = ({
         {posts.map((post) => (
           <Post
             key={post.id}
+            id={post.id}
             text={post.text}
             author={post.author.substring(0, 5)}
             owner={post.owner.substring(0, 5)}
+            newOwner={userInformation.uid}
             time={post.time}
             like={post.like}
             isOwned={post.owner === userInformation.uid}

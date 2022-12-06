@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
   const queryParams = req.query;
   const text = queryParams.postText;
   const author = queryParams.postAuthor;
-  const id = text.replace(/\s+/g, '-').toLowerCase();
+  const id = text.replace(/[!@#$%^&* ',.]/g, '-').toLowerCase();
 
   const tweetPost = firestore.setDoc(
     firestore.doc(db, 'posts', id),

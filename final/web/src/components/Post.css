@@ -20,6 +20,10 @@
   display: flex;
 }
 
+.post-action-own {
+  cursor: grab;
+}
+
 .post-action-upvote {
   margin-right: 20px;
 }
@@ -46,4 +50,5 @@
 
 .post-content {
   display: flex;
+  text-align: start;
 }

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Post.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
+import ownPost from '../apis/ownPost';
 
-const Post = ({author, owner, text, time, isOwned}) => {
+const Post = ({ author, owner, text, time, isOwned, id, newOwner }) => {
+  const [isOwner, setIsOwner] = useState(isOwned);
 
   return (
     <div className='post'>
@@ -16,7 +18,16 @@ const Post = ({author, owner, text, time, isOwned}) => {
       <div className='post-action'>
         <div className='post-action-own'>
           <FontAwesomeIcon icon={faBagShopping} />
-          <div>{isOwned ? '(Owned)' : '(Not Owned)'}</div>
+          <div
+            onClick={async () => {
+              const res = await ownPost(id, newOwner);
+              if (res.status === 200) {
+                setIsOwner(true);
+              }
+            }}
+          >
+            {isOwner ? '(Owned)' : '(Not Owned)'}
+          </div>
         </div>
       </div>
     </div>

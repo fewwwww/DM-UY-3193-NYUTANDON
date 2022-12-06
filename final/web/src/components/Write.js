@@ -8,7 +8,7 @@ const Write = ({ setShowWrite, userInformation }) => {
       <div className='write-container'>
         <form
           className='WriteForm'
-          action='http://localhost:4000/tweet'
+          action='https://dynamic-webapp-final.herokuapp.com/tweet'
         >
           <label htmlFor='postText'>Write</label>
           <textarea name='postText' />

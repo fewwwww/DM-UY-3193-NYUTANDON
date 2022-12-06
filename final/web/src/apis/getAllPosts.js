@@ -1,5 +1,5 @@
 const getAllPosts = async () => {
-  const response = await fetch('http://localhost:4000/').catch((err) =>
+  const response = await fetch('https://dynamic-webapp-final.herokuapp.com/').catch((err) =>
     console.log(err),
   );
   const posts = await response.json();

@@ -1,11 +1,11 @@
 const express = require('express');
-const cors = require('cors')
 const app = express();
 const port = process.env.PORT || 4000;
 
-app.use(cors(({
-  origin: 'https://famous-vacherin-72b30d.netlify.app/'
-})));
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 
 const firebase = require('firebase/app');
 const firebaseConfig = {

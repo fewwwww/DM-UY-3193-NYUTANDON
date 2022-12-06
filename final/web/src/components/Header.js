@@ -14,7 +14,12 @@ import {
 import Write from './Write';
 import { getAuth, signOut } from 'firebase/auth';
 
-const Header = ({ isLoggingIn, setIsLoggingIn, setUserInformation }) => {
+const Header = ({
+  isLoggingIn,
+  setIsLoggingIn,
+  userInformation,
+  setUserInformation,
+}) => {
   const [showWrite, setShowWrite] = useState(false);
 
   const logOut = () => {
@@ -31,7 +36,9 @@ const Header = ({ isLoggingIn, setIsLoggingIn, setUserInformation }) => {
 
   return (
     <header>
-      {showWrite && <Write setShowWrite={setShowWrite} />}
+      {showWrite && (
+        <Write setShowWrite={setShowWrite} userInformation={userInformation} />
+      )}
       <nav>
         <Link to='/'>
           <div className='nav-item'>

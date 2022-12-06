@@ -6,6 +6,11 @@
   "scripts": {
     "start": "node app.js"
   },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase": "^9.13.0"
+  },
   "author": "",
   "license": "ISC"
 }

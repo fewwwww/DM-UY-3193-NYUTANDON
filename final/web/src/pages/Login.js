@@ -49,6 +49,7 @@ const LoginPage = ({
       <Header
         isLoggingIn={isLoggingIn}
         setIsLoggingIn={setIsLoggingIn}
+        userInformation={userInformation}
         setUserInformation={setUserInformation}
       />
       <div className='content'>

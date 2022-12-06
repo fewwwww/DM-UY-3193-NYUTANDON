@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
 
   updateOwner
     .then((response) => {
-      return res.redirect('http://localhost:3000');
+      return res.redirect('http://https://famous-vacherin-72b30d.netlify.app/');
     })
     .catch((error) => {
       console.log(error);

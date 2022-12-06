@@ -26,7 +26,7 @@ router.get('/', (req, res) => {
 
   tweetPost
     .then((response) => {
-      return res.redirect('http://localhost:3000');
+      return res.redirect('http://https://famous-vacherin-72b30d.netlify.app/');
     })
     .catch((error) => {
       console.log(error);

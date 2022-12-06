@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Post from '../components/Post';
+import getAllPosts from '../apis/getAllPosts';
 
 const ProfilePage = ({
   isLoggingIn,
@@ -16,6 +17,15 @@ const ProfilePage = ({
     }
   }, [isLoggingIn, navigate]);
 
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+    const getPosts = async () => {
+      const posts = await getAllPosts();
+      setPosts(posts);
+    };
+    getPosts();
+  }, []);
+
   if (!userInformation) {
     return;
   }
@@ -29,17 +39,48 @@ const ProfilePage = ({
         setUserInformation={setUserInformation}
       />
       <div className='content profile-content'>
-        <h1>{userInformation.email.split('@')[0]}</h1>
+        <h1>
+          {userInformation.email.split('@')[0]} (
+          {userInformation.uid.substring(0, 5)})
+        </h1>
         <p>Email: {userInformation.email}</p>
         <p>uid: {userInformation.uid}</p>
         <p className='profile-posts'>posted:</p>
-        <Post />
-        <Post />
-        <Post />
+        {posts.map((post) => {
+          if (post.author === userInformation.uid) {
+            return (
+              <Post
+                key={post.id}
+                text={post.text}
+                author={post.author.substring(0, 5)}
+                owner={post.owner.substring(0, 5)}
+                time={post.time}
+                like={post.like}
+                isOwned={post.owner === userInformation.uid}
+              />
+            );
+          } else {
+            return null;
+          }
+        })}
         <p className='profile-posts'>owned:</p>
-        <Post />
-        <Post />
-        <Post />
+        {posts.map((post) => {
+          if (post.owner === userInformation.uid) {
+            return (
+              <Post
+                key={post.id}
+                text={post.text}
+                author={post.author.substring(0, 5)}
+                owner={post.owner.substring(0, 5)}
+                time={post.time}
+                like={post.like}
+                isOwned={post.owner === userInformation.uid}
+              />
+            );
+          } else {
+            return null;
+          }
+        })}
       </div>
     </div>
   );

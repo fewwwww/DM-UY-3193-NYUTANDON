@@ -20,10 +20,10 @@ const Post = ({ author, owner, text, time, isOwned, id, newOwner }) => {
           <FontAwesomeIcon icon={faBagShopping} />
           <div
             onClick={async () => {
-              const res = await ownPost(id, newOwner);
-              if (res.status === 200) {
-                setIsOwner(true);
-              }
+              ownPost(id, newOwner)
+              // not a optimal implentation
+              // due to cors redirection error by netlify
+              setIsOwner(true);
             }}
           >
             {isOwner ? '(Owned)' : '(Not Owned)'}
